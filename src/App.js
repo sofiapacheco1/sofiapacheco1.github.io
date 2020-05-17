@@ -83,8 +83,6 @@ class App extends React.Component{
   }
 
   updateStock() {
-
-    console.log('updateStock');
     socket.on('UPDATE',(data) => {
       if (this.state.ready_stock && this.state.ready_exchange){
         var date = new Date(data['time'] * 1000)
